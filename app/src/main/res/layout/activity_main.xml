@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="18dp"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edt_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/cost_of_service"
+        android:hint="@string/cost_of_service"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_how"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip"
+        app:layout_constraintStart_toStartOf="@id/edt_cost"
+        app:layout_constraintTop_toBottomOf="@id/edt_cost" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/txt_how"
+        app:layout_constraintTop_toBottomOf="@id/txt_how">
+
+        <RadioButton
+            android:id="@+id/rb_amazing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amazing" />
+
+        <RadioButton
+            android:id="@+id/rb_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/good"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb_amazing" />
+
+        <RadioButton
+            android:id="@+id/rb_okey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Okey"
+            app:layout_constraintStart_toStartOf="@+id/rb_good"
+            app:layout_constraintTop_toBottomOf="@+id/rb_good" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txt_round_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/round_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sw_round_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="220dp"
+        app:layout_constraintLeft_toLeftOf="@id/txt_round_tip"
+        app:layout_constraintRight_toRightOf="@id/txt_round_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/calculate"
+        app:layout_constraintStart_toStartOf="@+id/sw_round_up"
+        app:layout_constraintTop_toBottomOf="@+id/sw_round_up" />
+
+    <TextView
+        android:id="@+id/txt_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_amount"
+        tools:text="Tip Amount: $10"
+        app:layout_constraintEnd_toStartOf="@id/btn_calculate"
+        app:layout_constraintStart_toStartOf="@id/btn_calculate"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

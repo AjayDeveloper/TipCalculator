@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cost_of_service">Cost of Service</string>
+    <string name="tip">How was the service ??</string>
+    <string name="amazing">Amazing(20%)</string>
+    <string name="good">Good(18%)</string>
+    <string name="Okey">Okey(15%)</string>
+    <string name="round_up">Round up tip ?</string>
+    <string name="calculate">Calculate</string>
+    <string name="tip_amount">Tip Amount : %s</string>
+</resources>
